@@ -8,9 +8,9 @@
 
 <meta name="author" content="Tiffany Li">
 <meta name="dcterms.date" content="2023-08-01">
-<meta name="description" content="Testing Quarto">
+<meta name="description" content="An Analysis on Variables that Affect Happiness">
 
-<title>myblog - First File</title>
+<title>myblog - The World’s Happiness</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,9 +96,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -146,10 +143,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">First File</h1>
+      <h1 class="title">The World’s Happiness</h1>
                   <div>
         <div class="description">
-          Testing Quarto
+          An Analysis on Variables that Affect Happiness
         </div>
       </div>
                 </div>
@@ -175,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">August 1, 2023</p>
+        <p class="date-modified">August 4, 2023</p>
       </div>
     </div>
       
@@ -192,345 +189,189 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="the-worlds-happiness" class="level1">
-<h1>The World’s Happiness</h1>
-<section id="tiffany-li" class="level4">
-<h4 class="anchored" data-anchor-id="tiffany-li">Tiffany Li</h4>
-</section>
-<section id="august-4-2023" class="level4">
-<h4 class="anchored" data-anchor-id="august-4-2023">August 4, 2023</h4>
-</section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Different people have different purposes in life: some want to have a successful career, some want to be filthy rich, some want a family, but above everything, humans naturally want to be happy. This project explores the happiness of people from different countries and the some of the many variables that may contribute to one’s happiness.</p>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The datasets highlighted in this assignment aims to analyze the happiness of citizens in each country, focusing on different variables that may influence them. One dataset discusses the changes of these variables in each country over the years while the other dataset describes the 2022 happiness scores of each country, with the supporting variable scores.</p>
-</section>
-<section id="link" class="level3">
-<h3 class="anchored" data-anchor-id="link">Link</h3>
-<p>This data is taken from the 2022 World Happiness Report at https://worldhappiness.report/ed/2022/.</p>
-</section>
-<section id="motivations" class="level3">
-<h3 class="anchored" data-anchor-id="motivations">Motivations</h3>
-<p>I think one of the many things I’m interested in and enjoy analyzing is human behavior – why people think a certain way and/or how things may affect them. With Generation Z bringing a lot more awareness to mental health, it sparked a curiosity in me to think about our happiness and what factors may play a role. Is it dependent on our countries’ policies? Our cultural factors? What variables are there? With COVID-19 trampling our world in recent years, I’ve also thought a lot about how that has affected who we are as a society. I know I personally have been affected by this in more ways than one, so I was curious to see if the numbers reflect this as well, especially when it pertains to our happiness.</p>
-</section>
 <section id="research-questions" class="level3">
 <h3 class="anchored" data-anchor-id="research-questions">Research Questions</h3>
 <p>For this assignment, I decided to compare the happiness variable factors of different countries, contrasting those of high rankings and those with low. I am curious to know: * Which variable plays the largest factor in the happiness of each country? * Does that variable have any correlation with other vairables? What examples can we use to support these relationships?</p>
-<p>Due to COVID occurring in recent years, I also wanted to see if there was any major difference between the two countries (or even if COVID is reflected in the data of each individual country).</p>
+</section>
+<section id="about-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="about-the-data">About the Data</h3>
+<p>The datasets highlighted in this assignment aims to analyze the happiness of citizens in each country, focusing on different variables that may influence them. One dataset discusses the changes of these variables in each country over the years while the other dataset describes the 2022 happiness scores of each country with the supporting variable scores.</p>
+<p>The first dataset, “Happiness Report”, displays all the data collected about each country and the corresponding year they collected the data. To understand the variables in this dataset listed in the columns, I turned to the appendix of the report I collected this data from.</p>
+<ul>
+<li><strong>Life ladder</strong> is an average made of up where citizens feel they stand on a scale of 0-10 regarding their happiness in life.</li>
+<li><strong>Log GDP per capita</strong> is data taken from the World Development Indicators<br>
+</li>
+<li><strong>Healthy life expectancy at birth</strong> is data taken from the World Health Organization (WHO).</li>
+<li><strong>Freedom to make life choices</strong> is the average for a binary response to a question asking whether or not they are satisfied with their freedom to choose what they want to do with their lives.</li>
+<li><strong>Generosity</strong> is the average for a binary response to a question asking whether or not they have donated money in the past month.</li>
+<li><strong>Perceptions of corruption</strong> is the average for two binary responses to the questions on whether or not corruption is spread throughout the government and whether or not corruption is spread throughout businesses.</li>
+<li><strong>Positive affect</strong> is the average to responses on questions asking about whether or not they laughed, felt enjoyment, and did interesting things the day before.</li>
+<li><strong>Negative affect</strong> is the average to responses on questions asking whether or not they worried, felt sadness, and anger the day before.</li>
+<li><strong>Confidence in national government</strong> is the average made up of whether or not citizens felt confidence in their government.</li>
+</ul>
+<p>The second dataset, “Happiness Score”, includes values generated from regressions run on each variable to determine how much they affect happiness. These values are added up to get a summed happiness score, which the rankings are based on, with the highest happiness score being at the top of the ranks and the lowest being at the bottom. Dystopia is a factor created to highlight the effects of the 6 variables on a hypothetical country with statistics made up of the world’s lowest national averages. This value allows all countries to have a zero or positive score for the different variables.</p>
 </section>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="findings" class="level2">
+<h2 class="anchored" data-anchor-id="findings">Findings</h2>
+<p>In order to understand and analyze the information provided to me in this dataset, I set off to look into what each of them discussed. After learning about my dataset, I decided to dive into the different variables through data exploration and their correlations with each other. Here’s what I found:</p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Happiness_Report <span class="op">=</span> <span class="st">'HappinessReportCSV.csv'</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Happiness_Score <span class="op">=</span> <span class="st">'HappinessScoreData.csv'</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_csv(Happiness_Report)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_csv(Happiness_Score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Happiness_Report <span class="op">=</span> <span class="st">'HappinessReportCSV.csv'</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Happiness_Score <span class="op">=</span> <span class="st">'HappinessScoreData.csv'</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_csv(Happiness_Report)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_csv(Happiness_Score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-scrolled="true" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df1.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>During my data exploration, I observed that GDP per capita consistently emerges as one of the most significant contributors to happiness. This observation is evident across the highest and lowest ranked countries for happiness, as depicted in the visualizations below. Although some variability exists among the most critical factors in some of these graphs, it is evident that GDP per capita remains a prominent influence. This suggests that money plays a crucial role in people’s happiness, as GDP per capita reflects the average economic output and income per person in each country.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>top20 <span class="op">=</span> df2.loc[df2[<span class="st">'RANK'</span>] <span class="op">&lt;=</span> <span class="dv">20</span>, (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Expl'</span>)) <span class="op">|</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                       (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Dys'</span>)) <span class="op">|</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                        (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Country'</span>))].copy()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>top20.plot.bar(x<span class="op">=</span><span class="st">'Country'</span>, stacked<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Composition of Happiness Scores for the 20 happiest countries'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'center left'</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Country name</th>
-<th data-quarto-table-cell-role="th">year</th>
-<th data-quarto-table-cell-role="th">Life Ladder</th>
-<th data-quarto-table-cell-role="th">Log GDP per capita</th>
-<th data-quarto-table-cell-role="th">Social support</th>
-<th data-quarto-table-cell-role="th">Healthy life expectancy at birth</th>
-<th data-quarto-table-cell-role="th">Freedom to make life choices</th>
-<th data-quarto-table-cell-role="th">Generosity</th>
-<th data-quarto-table-cell-role="th">Perceptions of corruption</th>
-<th data-quarto-table-cell-role="th">Positive affect</th>
-<th data-quarto-table-cell-role="th">Negative affect</th>
-<th data-quarto-table-cell-role="th">Confidence in national government</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Afghanistan</td>
-<td>2008</td>
-<td>3.723590</td>
-<td>7.302574</td>
-<td>0.450662</td>
-<td>50.500000</td>
-<td>0.718114</td>
-<td>0.173169</td>
-<td>0.881686</td>
-<td>0.414297</td>
-<td>0.258195</td>
-<td>0.612072</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Afghanistan</td>
-<td>2009</td>
-<td>4.401778</td>
-<td>7.472446</td>
-<td>0.552308</td>
-<td>50.799999</td>
-<td>0.678896</td>
-<td>0.195469</td>
-<td>0.850035</td>
-<td>0.481421</td>
-<td>0.237092</td>
-<td>0.611545</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Afghanistan</td>
-<td>2010</td>
-<td>4.758381</td>
-<td>7.579183</td>
-<td>0.539075</td>
-<td>51.099998</td>
-<td>0.600127</td>
-<td>0.125859</td>
-<td>0.706766</td>
-<td>0.516907</td>
-<td>0.275324</td>
-<td>0.299357</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>Afghanistan</td>
-<td>2011</td>
-<td>3.831719</td>
-<td>7.552006</td>
-<td>0.521104</td>
-<td>51.400002</td>
-<td>0.495901</td>
-<td>0.167723</td>
-<td>0.731109</td>
-<td>0.479835</td>
-<td>0.267175</td>
-<td>0.307386</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>Afghanistan</td>
-<td>2012</td>
-<td>3.782938</td>
-<td>7.637953</td>
-<td>0.520637</td>
-<td>51.700001</td>
-<td>0.530935</td>
-<td>0.241247</td>
-<td>0.775620</td>
-<td>0.613513</td>
-<td>0.267919</td>
-<td>0.435440</td>
-</tr>
-</tbody>
-</table>
-
+<pre><code>&lt;matplotlib.legend.Legend at 0x7f91fd562830&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="FinalProject_files/figure-html/cell-3-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-</div>
-<p>This dataset discusses different variables that was used to measure the happiness of citizens in different countries. Life ladder is an average made of up where citizens feel they stand on a scale of 0-10 regarding their happiness in life. Log GDP per capita is taken from the World Development Indicators and healthy life expectancy from the World Health Organization (WHO). The other factors are averages of scores based on binary numbers (yes/no) regarding questions about the respective variable.</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">RANK</th>
-<th data-quarto-table-cell-role="th">Country</th>
-<th data-quarto-table-cell-role="th">Happiness score</th>
-<th data-quarto-table-cell-role="th">Whisker-high</th>
-<th data-quarto-table-cell-role="th">Whisker-low</th>
-<th data-quarto-table-cell-role="th">Dystopia (1.83) + residual</th>
-<th data-quarto-table-cell-role="th">Explained by: GDP per capita</th>
-<th data-quarto-table-cell-role="th">Explained by: Social support</th>
-<th data-quarto-table-cell-role="th">Explained by: Healthy life expectancy</th>
-<th data-quarto-table-cell-role="th">Explained by: Freedom to make life choices</th>
-<th data-quarto-table-cell-role="th">Explained by: Generosity</th>
-<th data-quarto-table-cell-role="th">Explained by: Perceptions of corruption</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1</td>
-<td>Finland</td>
-<td>7.821</td>
-<td>7.886</td>
-<td>7.756</td>
-<td>2.518</td>
-<td>1.892</td>
-<td>1.258</td>
-<td>0.775</td>
-<td>0.736</td>
-<td>0.109</td>
-<td>0.534</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2</td>
-<td>Denmark</td>
-<td>7.636</td>
-<td>7.710</td>
-<td>7.563</td>
-<td>2.226</td>
-<td>1.953</td>
-<td>1.243</td>
-<td>0.777</td>
-<td>0.719</td>
-<td>0.188</td>
-<td>0.532</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>3</td>
-<td>Iceland</td>
-<td>7.557</td>
-<td>7.651</td>
-<td>7.464</td>
-<td>2.320</td>
-<td>1.936</td>
-<td>1.320</td>
-<td>0.803</td>
-<td>0.718</td>
-<td>0.270</td>
-<td>0.191</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4</td>
-<td>Switzerland</td>
-<td>7.512</td>
-<td>7.586</td>
-<td>7.437</td>
-<td>2.153</td>
-<td>2.026</td>
-<td>1.226</td>
-<td>0.822</td>
-<td>0.677</td>
-<td>0.147</td>
-<td>0.461</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5</td>
-<td>Netherlands</td>
-<td>7.415</td>
-<td>7.471</td>
-<td>7.359</td>
-<td>2.137</td>
-<td>1.945</td>
-<td>1.206</td>
-<td>0.787</td>
-<td>0.651</td>
-<td>0.271</td>
-<td>0.419</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>This dataset has the values generated from regressions run on each variable to determine how much they affect happiness. These values are added up to get a summed happiness score, which the rankings are based on, with the highest happiness score being at the top of the ranks and the lowest being at the bottom.</p>
-<section id="exploratory-data-visualizations" class="level3">
-<h3 class="anchored" data-anchor-id="exploratory-data-visualizations">Exploratory Data Visualizations</h3>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df2.loc[df2[<span class="st">'Country'</span>] <span class="op">==</span> <span class="st">'United States'</span>]</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>US_df <span class="op">=</span> df2.loc[df2[<span class="st">'Country'</span>]<span class="op">==</span><span class="st">'United States'</span>, (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Expl'</span>)) <span class="op">|</span> </span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lowest <span class="op">=</span> (df2[<span class="st">'RANK'</span>] <span class="op">&gt;</span> <span class="dv">126</span>) <span class="op">&amp;</span> (df2[<span class="st">'RANK'</span>] <span class="op">&lt;=</span> <span class="dv">146</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bottom20 <span class="op">=</span> df2.loc[lowest, (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Expl'</span>)) <span class="op">|</span> </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                       (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Dys'</span>)) <span class="op">|</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                        (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Country'</span>))].copy()</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>US_df.plot.bar(x<span class="op">=</span><span class="st">'Country'</span>, width <span class="op">=</span> <span class="fl">0.25</span>, stacked<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Composition of Happiness Scores for the United States'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>bottom20.plot.bar(x<span class="op">=</span><span class="st">'Country'</span>, stacked<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Composition of Happiness Scores for the 20 Unhappiest Countries'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'center left'</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>&lt;matplotlib.legend.Legend at 0x7f91fafa3b50&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="FinalProject_files/figure-html/cell-4-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Because we understand that GDP per capita plays a large role in one’s happiness, we must also look to see if it has any correlation with other variables. This is important as it can help us identify multicollinearity as well as understand if the influence of a variable is actually greated than depicted in the data.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df1_2021 <span class="op">=</span> df1.loc[df1[<span class="st">'year'</span>] <span class="op">==</span> <span class="dv">2021</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sns.regplot(df1_2021, x<span class="op">=</span><span class="st">'Log GDP per capita'</span>,y<span class="op">=</span><span class="st">'Social support'</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'linestyle'</span>: <span class="st">'--'</span>, <span class="st">'linewidth'</span>:<span class="fl">1.5</span>}, ci <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Log GDP per Capita'</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Social Support'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation between Log GDP per Capita and Social Support in All Countries'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>Text(0.5, 1.0, 'Composition of Happiness Scores for the United States')</code></pre>
+<pre><code>Text(0.5, 1.0, 'Correlation between Log GDP per Capita and Social Support in All Countries')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="FinalProject_files/figure-html/cell-5-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<p>This is the composition of happiness for the United States, the country in which I reside in. It seems as though GDP plays a large part in the what makes American citizens happy.</p>
+<p>By analyzing this graph that illustrates the relationship between social support and log GDP per capita in each country, we are able to identify whether or not they are correlated. Based on my visualization, we see that there <em>is</em> a positive relationship between the two variables. This sugggests that as individuals contribute more to the economy and experience higher income levels, social support among them also increases.</p>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df2.loc[df2[<span class="st">'Country'</span>] <span class="op">==</span> <span class="st">'Afghanistan'</span>]</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>afg_df <span class="op">=</span> df2.loc[df2[<span class="st">'Country'</span>]<span class="op">==</span><span class="st">'Afghanistan'</span>, (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Expl'</span>)) <span class="op">|</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                       (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Dys'</span>)) <span class="op">|</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                        (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Country'</span>))].copy()</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>afg_df.plot.bar(x<span class="op">=</span><span class="st">'Country'</span>, width <span class="op">=</span> <span class="fl">0.25</span>, stacked<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Composition of Happiness Scores for Afghanistan'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sns.regplot(df1_2021, x<span class="op">=</span><span class="st">'Log GDP per capita'</span>,y<span class="op">=</span><span class="st">'Healthy life expectancy at birth'</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'linestyle'</span>: <span class="st">'--'</span>, <span class="st">'linewidth'</span>:<span class="fl">1.5</span>}, ci <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Log GDP per Capita'</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Healthy Life Expectancy at Birth'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation between Log GDP per Capita and Healthy Life Expectancy at Birth in All Countries'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>Text(0.5, 1.0, 'Composition of Happiness Scores for Afghanistan')</code></pre>
+<pre><code>Text(0.5, 1.0, 'Correlation between Log GDP per Capita and Healthy Life Expectancy at Birth in All Countries')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="FinalProject_files/figure-html/cell-6-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<p>This is the composition of happiness for Afghanistan, the country that is ranked the lowest in happiness. It seems as though there is a lack of data, which results in certain variables not having scores, lowering the happiness. Based on the provided data, GDP per capita also plays a large role in their happiness.</p>
+<p>Next, we will examine the relationship between health life expectancy at birth and log GDP per capita, as shown in the graph above. The visualization suggests a positive correlation, indicating that GDP has an impact on life expectancy. As individuals experience higher income levels and contribute more to the economy, their life expectancies increase, leading to a healthier and, consequently, happier life.</p>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df2.loc[df2[<span class="st">'Country'</span>] <span class="op">==</span> <span class="st">'Finland'</span>]</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>fin_df <span class="op">=</span> df2.loc[df2[<span class="st">'Country'</span>]<span class="op">==</span><span class="st">'Finland'</span>, (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Expl'</span>)) <span class="op">|</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                       (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Dys'</span>)) <span class="op">|</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                        (df2.columns.<span class="bu">str</span>.contains(<span class="st">'Country'</span>))].copy()</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>fin_df.plot.bar(x<span class="op">=</span><span class="st">'Country'</span>, width <span class="op">=</span> <span class="fl">0.25</span>, stacked<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Composition of Happiness Scores for Finland'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sns.regplot(df1_2021, x<span class="op">=</span><span class="st">'Log GDP per capita'</span>,y<span class="op">=</span><span class="st">'Freedom to make life choices'</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'linestyle'</span>: <span class="st">'--'</span>, <span class="st">'linewidth'</span>:<span class="fl">1.5</span>}, ci <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Log GDP per Capita'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Freedom to Make Life Choices'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation between Log GDP per Capita and Freedom to Make Life Choices in All Countries'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>Text(0.5, 1.0, 'Composition of Happiness Scores for Finland')</code></pre>
+<pre><code>Text(0.5, 1.0, 'Correlation between Log GDP per Capita and Freedom to Make Life Choices in All Countries')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="FinalProject_files/figure-html/cell-7-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<p>This is the composition of happiness for Finland, the happiest country in the world based on happiness score. It seems as though GDP per capita also plays a large role in their happiness.</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df1_2021 <span class="op">=</span> df1.loc[df1[<span class="st">'year'</span>] <span class="op">==</span> <span class="dv">2021</span>]</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(df1_2021, x<span class="op">=</span><span class="st">'Healthy life expectancy at birth'</span>,y<span class="op">=</span><span class="st">'Log GDP per capita'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>&lt;Axes: xlabel='Healthy life expectancy at birth', ylabel='Log GDP per capita'&gt;</code></pre>
+<p>The visualization above depicts the freedom to make life choices in respect to log GDP per capita. This trendline suggests a very slight positive correlation, indicating that higher income brings you greater freedom. However, it is also important to note the amount of outliers in this visualization, which may mean GDP doesn’t have <em>that</em> strong of a relationship with the freedom to make life choices or that there may be other implications.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sns.regplot(df1_2021, x<span class="op">=</span><span class="st">'Log GDP per capita'</span>,y<span class="op">=</span><span class="st">'Generosity'</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'linestyle'</span>: <span class="st">'--'</span>, <span class="st">'linewidth'</span>:<span class="fl">1.5</span>}, ci <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Log GDP per Capita'</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Generosity'</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation between Log GDP per Capita and Generosity in All Countries'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>Text(0.5, 1.0, 'Correlation between Log GDP per Capita and Generosity in All Countries')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="FinalProject_files/figure-html/cell-8-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<p>This graph shows the healthy life expectancy at birth in respect to log gdp per capita in every country. It suggests there is a relationship between the two variables, with the graph indicating there is a positive relationship.</p>
-</section>
-<section id="analysis" class="level3">
-<h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I want to create a graph that shows multiple examples of GDP having a relationship with other variables in different years </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This next visualization examines whether or not there is a relationship between generosity in respect to log GDP per capita. Because the trendline is horizontal, it implies that there is no relationship between the two. The average generosity contribution is the same whether or not the GDP increases nor decreases.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sns.regplot(df1_2021, x<span class="op">=</span><span class="st">'Log GDP per capita'</span>,y<span class="op">=</span><span class="st">'Perceptions of corruption'</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'linestyle'</span>: <span class="st">'--'</span>, <span class="st">'linewidth'</span>:<span class="fl">1.5</span>}, ci <span class="op">=</span> <span class="va">None</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Log GDP per Capita'</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Perceptions of Corruption'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation between Log GDP per Capita and Perceptions of Corruption in All Countries'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>Text(0.5, 1.0, 'Correlation between Log GDP per Capita and Perceptions of Corruption in All Countries')</code></pre>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I want to create a bar graph comparing the top ranked countries' GDPs with the lower ranked countries to show it plays a </span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># large role in the happiness of countries (see if there is a relationship)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="FinalProject_files/figure-html/cell-9-output-2.png" class="img-fluid"></p>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I would like to look at how peoples perception of happiness has changed throughout the years (life ladder) and compare it to </span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the changes in gdp (and even look at if there are any significant events that may affect the two)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I want to create a visualization that lookjs at data between 2019-2021 to see a before, during, and after in regards to Covid</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and how Covid may have affected happiness scores and the variables surrounding it.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>This final plot analyzes the relationship between the perceptions of corruption in respect to log GDP per capita. Based on this visualization, there is a negative correlation between the two variables: as log GDP per capita increases, the perceptions of corruption decrease.</p>
+</section>
+<section id="findings-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="findings-analysis">Findings &amp; Analysis</h2>
+<section id="gdp-per-capita-vs.-happiness" class="level3">
+<h3 class="anchored" data-anchor-id="gdp-per-capita-vs.-happiness">GDP per capita vs.&nbsp;Happiness</h3>
+<p>Based on our data visualizations, we found that GDP per capital significantly contributes to countries’ happiness scores. GDP is a measure of an economy’s overall performance, encompassing production, expenditures and citizens’ income. Oftentimes, countries with a higher GDP are industrialized countries with tons of technological advances due to their ability to garner resources. This finding indicating the contribution of GDP to one’s happiness suggests the significance of financial resources. While GDP in itself may not directly cause happiness, it reflects factors that influence the overall well-being of the human race. Adequate financial resources enable people to lead the lives they aspire to and access things that contribute to their happiness. Although the saying goes, “money can’t buy happiness,” it certainly plays a role in enhancing lifestyle choices and other factors that influence happiness, as we will discuss further.</p>
+</section>
+<section id="gdp-per-capita-and-its-relation-with-other-variables" class="level3">
+<h3 class="anchored" data-anchor-id="gdp-per-capita-and-its-relation-with-other-variables">GDP per capita and Its Relation with Other Variables</h3>
+<section id="social-support" class="level4">
+<h4 class="anchored" data-anchor-id="social-support">Social Support</h4>
+<p>The first of our findings reveals a positive correlation between social support and log GDP per capita. This implies that as the flow of money increases, the level of support people can receive from one another also increases. As previously mentioned, an increase in GDP leads to a higher availability of resources, providing a variety of options for those in need of help. The improved availability of essential resources ensures more effective fulfillment of people’s needs. Consequently, as GDP per capita increases, the willingness to support one another also rises. A growing GDP is often accompanied by increased income, which enhances people’s willingness to assist their loved ones and those in need. With greater financial means and resources, individuals are better equipped to make positive contributions to their communities, fostering a stronger sense of unity and support among people. As a result of this all, this sense of community also brings people joy, increasing their overall happiness.</p>
+</section>
+<section id="healthy-life-expectancy-at-birth" class="level4">
+<h4 class="anchored" data-anchor-id="healthy-life-expectancy-at-birth">Healthy Life Expectancy at Birth</h4>
+<p>Another significant finding was the positive correlation between healthy life expectancy at birth and log GDP per capita. This implies that citizens living in more industrialized economies are likely to have longer life expectancies. Countries with a higher level of economic development possess the financial means and resources to promote better well-being. They can invest in advanced technology, research, and other resources that improve people’s quality of life.</p>
+<p>For instance, during the COVID pandemic, developed countries were better equipped to handle the crisis compared to non-developed countries. The availability of hospitals with advanced equipment and knowledgeable healthcare professionals enabled better treatment for affected patients, leading to access to medication for symptom relief. Developed nations also had the advantage of predicting and learning about the virus earlier, which facilitated the rapid development of vaccinations to prevent further spread. In contrast, developing countries faced more significant challenges and consequences due to limited resources.</p>
+<p>The level of financial resources significantly contributes to the standard of living for people, impacting happiness levels and healthier lives. While happiness is influenced by various factors beyond money, wealth can indeed contribute to happiness and provide a sense of security in our lives. This association between GDP, healthier lives, and happiness underscores the importance of economic development in enhancing overall well-being and life quality.</p>
+</section>
+<section id="freedom-to-make-life-choices" class="level4">
+<h4 class="anchored" data-anchor-id="freedom-to-make-life-choices">Freedom to Make Life Choices</h4>
+<p>The next visualization led us to uncover that log GDP per capita also influences the freedom to make life choices, demonstrating a predominantly positive relationship. This suggests that as the flow of money increases and the economy improves, people’s freedom to make choices also increases. Financial resources give individuals the ability to make decisions according to their preferences, granting them control over their lives. Conversely, a lack of financial means can restrict one’s options, as they may rely on resources that are not their own or unavailable to them. It is often said that money is power, and in the world we inhabit, this sentiment holds true.</p>
+<p>However, our visualization also revealed outliers, indicating that higher GDP does not always equate to higher freedom. This is because various other factors may limit one’s ability to exercise personal choices, such as social, cultural, or political constraints. While money can enhance freedom to some extent, it may not entirely overcome all external restrictions that individuals face. Consequently, achieving true freedom often involves addressing multifaceted societal factors beyond GDP alone.</p>
+</section>
+<section id="generosity" class="level4">
+<h4 class="anchored" data-anchor-id="generosity">Generosity</h4>
+<p>The subsequent visualization shed light on the relationship between generosity and GDP per capita, revealing a surprising finding - the two are not highly correlated. This unexpected result challenges the assumption that an increase in financial resources would automatically lead to a greater willingness to help others. Initially, I had anticipated that higher GDP would reflect a similar pattern as seen in the relationship between GDP and social support.</p>
+<p>However, the lack of a strong correlation between higher GDP and greater generosity can be attributed to several factors. Firstly, GDP does not solely indicate individual wealth; it encompasses various production factors, and income disparities may exist within the population. Consequently, financial resources may not be equally distributed, limiting the capacity for generosity among certain demographics.</p>
+<p>Moreover, cultural and social factors play a significant role in shaping people’s attitudes towards giving. Cultural norms, traditions, and social expectations can either encourage or discourage acts of generosity, regardless of GDP levels. Thus, even in countries with higher GDP, cultural and social limitations may hinder people from actively donating to others.</p>
+<p>In summary, the surprising lack of a strong correlation between GDP per capita and generosity suggests that the relationship is more intricate than initially assumed. It emphasizes the importance of considering various economic, cultural, and social factors in understanding patterns of generosity across different societies.</p>
+</section>
+<section id="perceptions-of-corruption" class="level4">
+<h4 class="anchored" data-anchor-id="perceptions-of-corruption">Perceptions of Corruption</h4>
+<p>The final finding emerged from examining the relationship between perceptions of corruption and log GDP per capita. Our analysis revealed a negative correlation between these two factors, indicating that as GDP increases, perceptions of corruption tend to decrease. This trend can be attributed to the fact that countries with higher GDP are generally more developed, which often translates to stronger governance and well-established systems. The availability of greater financial resources enables these countries to create and enforce policies and regulations that enhance the overall functioning of their societies.</p>
+<p>In contrast, corruption tends to thrive in environments with little regulation or stability. Countries with lower GDP may lack the necessary resources to effectively combat corruption, leading to its persistence. Although corruption is not solely determined by a country’s GDP, it undeniably plays a significant role.</p>
+<p>In summary, our findings suggest that higher GDP is associated with lower perceptions of corruption due to the benefits of increased resources and better governance that come with economic development. While GDP is not the sole determinant of corruption, it does contribute to shaping the environment in which corrupt practices can either flourish or be mitigated.</p>
 </section>
 </section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-</section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<section id="conclusion-the-big-picture" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-the-big-picture">Conclusion &amp; The Big Picture</h3>
+<p>In conclusion, happiness is an extremely elaborate concept influenced by a myriad of variables. Throughout our exploration, we have uncovered various factors that contribute to the overall happiness levels of individuals and societies. While GDP per capita plays a role in shaping happiness itself, by influencing the other happiness variables like social support, healthier lives, freedom, generosity, and perceptions of corruption, it is just one piece of the puzzle. Other aspects, such as income distribution, social and cultural norms, government policies, and personal relationships, also significantly impact happiness. The complex interplay of these variables highlights the need for a comprehensive approach when understanding and promoting well-being.</p>
+<p>Studying the variables that influence happiness is of utmost importance in our pursuit of a better and more fulfilling life. Happiness is a fundamental aspect of human well-being, and understanding the factors that contribute to it can lead to more effective strategies for improving the quality of life for individuals and societies as a whole. By examining variables such as GDP per capita, social support, health, freedom, generosity, and perceptions of corruption, we gain valuable insights into the complex nature of happiness. This knowledge empowers policymakers, researchers, and individuals to make informed decisions and design interventions that promote happiness and well-being. As we navigate the complexities of human happiness, continued research and analysis of these variables hold the key to creating happier, healthier, and more harmonious societies for the benefit of all.</p>
+<section id="citations" class="level5">
+<h5 class="anchored" data-anchor-id="citations">Citations</h5>
+<p>Helliwell, J. F., Layard, R., Sachs, J. D., De Neve, J.-E., Aknin, L. B., &amp; Wang, S. (Eds.). (2022). World Happiness Report 2022. New York: Sustainable Development Solutions Network.</p>
 
 
+</section>
 </section>
 </section>
 
