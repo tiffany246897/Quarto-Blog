@@ -1,5 +1,5 @@
 ---
-title: "myblog"
+title: "Tiffany Li's DH 140 Final Blog"
 listing:
   contents: posts
   sort: "date desc"
